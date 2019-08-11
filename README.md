@@ -32,3 +32,11 @@ Rules are configured for use with:
 ## Prettier and typescript
 
 Any rules that conflicts or are uncessary becuase of prettier and typescript has been turned off according to [prettier source](https://github.com/prettier/eslint-config-prettier/blob/8e50dacca2067fd4ca1f258e47d0e6973cbea1fd/index.js) and [typescript source](https://github.com/typescript-eslint/typescript-eslint/blob/ebbcc010c546b5777c14f0b33ead851b620184e0/packages/eslint-plugin/src/configs/eslint-recommended.ts)). The affected rules are commented to indicate they are turened of becuase of prettier or typescript.
+
+## How to publish
+
+```
+yarn version --patch
+yarn version --minor
+yarn version --major
+```
