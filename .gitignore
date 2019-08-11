@@ -1,0 +1,35 @@
+# Dependency directory
+node_modules
+
+# Environment settings
+.env
+
+# Build cache
+tsconfig.tsbuildinfo
+
+# Build directory
+packages/*/lib
+packages/*/lib-dev
+packages/*/lib-cjs
+packages/*/lib-esm
+packages/*/dist
+packages/*/dist-dev
+packages/*/packages
+
+# Publish API uploaded files
+packages/multi-api-server/uploads
+packages/edit-server/uploads
+
+# Webpack stats
+stats.json
+
+# Other
+.DS_Store
+thumbs.db
+*.log
+processed.txt
+temp-schema.graphql
+tmp/
+
+# VS
+.vs

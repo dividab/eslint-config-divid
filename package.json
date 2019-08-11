@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "eslint-config-divid",
+  "version": "0.1.0",
+  "description": "Divid's ESLint config",
+  "main": "src/index.js",
+  "author": "Jonas Kello <jonas.kello@divid.se>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dividab/eslint-config-divid"
+  },
+  "bugs": {
+    "url": "https://github.com/dividab/eslint-config-divid/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "divid",
+    "javascript",
+    "typescript",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "peerDependencies": {
+    "eslint": "^6.1.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "eslint-plugin-functional": "^1.0.0-rc.2"
+  }
+}
