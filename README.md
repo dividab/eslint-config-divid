@@ -1,6 +1,6 @@
 # eslint-config-divid
 
-This package contains rules to enforce the programming style we use at Divid but should be useful to anyone using typescript and prettier with functional programming style.
+This package contains rules to enforce the programming style we use at [Divid](https://divid.se/) but should be useful to anyone using typescript and prettier with functional programming style.
 
 ## Usage
 
