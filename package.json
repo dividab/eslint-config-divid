@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-divid",
   "version": "0.2.0",
-  "description": "Divid's ESLint config",
+  "description": "ESLint Sharable Config using typescript and prettier with functional programming style",
   "main": "src/index.js",
   "author": "Jonas Kello <jonas.kello@divid.se>",
   "license": "MIT",
