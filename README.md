@@ -14,9 +14,9 @@ Add a file called `.eslintrc.js` to your project's root with the following conte
 
 ```js
 module.exports = {
-  extends: "./packages/eslint-config-divid",
+  extends: ".divid",
   parserOptions: {
-    project: "./packages/tsconfig.settings.json"
+    project: "./tsconfig.json"
   }
 };
 ```
