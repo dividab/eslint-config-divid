@@ -14,7 +14,7 @@ Add a file called `.eslintrc.js` to your project's root with the following conte
 
 ```js
 module.exports = {
-  extends: ".divid",
+  extends: "divid",
   parserOptions: {
     project: "./tsconfig.json"
   }
