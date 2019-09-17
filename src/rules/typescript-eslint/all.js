@@ -2,7 +2,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
-    "@typescript-eslint/array-type": ["error", "generic"], // ReadonlyArray<> only as generic before typescript version X.X
+    "@typescript-eslint/array-type": ["error", { default: "generic" }], // ReadonlyArray<> only as generic before typescript version X.X
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/ban-ts-ignore": "error",
     "@typescript-eslint/ban-types": "error",
@@ -15,8 +15,8 @@ module.exports = {
       {
         allowExpressions: true,
         allowTypedFunctionExpressions: true,
-        allowHigherOrderFunctions: true,
-      },
+        allowHigherOrderFunctions: true
+      }
     ],
     "@typescript-eslint/explicit-member-accessibility": "off", // TODO: Enable this?
     "@typescript-eslint/func-call-spacing": "off", // prettier
@@ -71,6 +71,6 @@ module.exports = {
     "@typescript-eslint/type-annotation-spacing": "off", // prettier
     // "@typescript-eslint/typedef": "error",
     "@typescript-eslint/unbound-method": "off", // TODO: Enable?
-    "@typescript-eslint/unified-signatures": "error",
-  },
+    "@typescript-eslint/unified-signatures": "error"
+  }
 };
