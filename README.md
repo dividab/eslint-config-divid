@@ -7,7 +7,7 @@ This package contains rules to enforce the programming style we use at [Divid](h
 Install the package and it's peer dependencies:
 
 ```bash
-yarn add --dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional
+yarn add --dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional confusing-browser-globals
 ```
 
 Add a file called `.eslintrc.js` to your project's root with the following content:
