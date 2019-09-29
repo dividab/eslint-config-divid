@@ -2,6 +2,14 @@
 
 This package contains rules to enforce the programming style we use at [Divid](https://divid.se/) but should be useful to anyone using typescript and prettier with functional programming style.
 
+## Features
+
+Rules are configured for use with:
+
+- Prettier for code formatting
+- Typescript
+- Functional programing style
+
 ## Usage
 
 Install the package and it's peer dependencies:
@@ -21,13 +29,44 @@ module.exports = {
 };
 ```
 
-## Features
+## vscode config
 
-Rules are configured for use with:
+In order for the vscode [eslint plugin](https://github.com/Microsoft/vscode-eslint) to work for typescript this is needed in the `.vscode/settings.json` file:
 
-- Prettier for code formatting
-- Typescript
-- Functional programing style
+```json
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ]
+}
+```
+
+You can set the vscode eslint plugin as recommended by adding a file `.vscode/extensions.json` with this content:
+
+```json
+{
+  "recommendations": ["dbaeumer.vscode-eslint"]
+}
+```
+
+## Overriding rules
+
+If you want to override a rule, just put it in `.eslintrc.js` like this:
+
+```js
+module.exports = {
+  extends: "divid",
+  parserOptions: {
+    project: "./tsconfig.json"
+  },
+  rules: {
+    "@typescript-eslint/array-type": ["error", { default: "array" }]
+  }
+};
+```
 
 ## Prettier and typescript
 
