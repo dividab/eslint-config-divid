@@ -29,6 +29,12 @@ module.exports = {
 };
 ```
 
+Add the following to the `scripts` section of your project's package.json:
+
+```
+"lint": "eslint './src/**/*.ts{,x}' --ext .js,.ts,.tsx -f visualstudio"
+```
+
 ## vscode config
 
 In order for the vscode [eslint plugin](https://github.com/Microsoft/vscode-eslint) to work for typescript this is needed in the `.vscode/settings.json` file:
