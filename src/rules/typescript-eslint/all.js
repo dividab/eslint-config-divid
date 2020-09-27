@@ -8,7 +8,7 @@ module.exports = {
     "@typescript-eslint/ban-tslint-comment": "error",
     "@typescript-eslint/ban-types": "error",
     "brace-style": "off",
-    "@typescript-eslint/brace-style": "error",
+    "@typescript-eslint/brace-style": "off", // prettier
     "@typescript-eslint/class-literal-property-style": "error",
     "comma-spacing": "off",
     "@typescript-eslint/comma-spacing": "error",
