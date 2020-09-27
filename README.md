@@ -1,5 +1,9 @@
 # eslint-config-divid
 
+[![npm version][version-image]][version-url]
+[![build][build-image]][build-url]
+[![MIT license][license-image]][license-url]
+
 This package contains rules to enforce the programming style we use at [Divid](https://divid.se/) but should be useful to anyone using typescript and prettier with functional programming style.
 
 ## Features
@@ -24,8 +28,8 @@ Add a file called `.eslintrc.js` to your project's root with the following conte
 module.exports = {
   extends: "divid",
   parserOptions: {
-    project: "./tsconfig.json"
-  }
+    project: "./tsconfig.json",
+  },
 };
 ```
 
@@ -66,11 +70,11 @@ If you want to override a rule, just put it in `.eslintrc.js` like this:
 module.exports = {
   extends: "divid",
   parserOptions: {
-    project: "./tsconfig.json"
+    project: "./tsconfig.json",
   },
   rules: {
-    "@typescript-eslint/array-type": ["error", { default: "array" }]
-  }
+    "@typescript-eslint/array-type": ["error", { default: "array" }],
+  },
 };
 ```
 
@@ -85,3 +89,10 @@ yarn version --patch
 yarn version --minor
 yarn version --major
 ```
+
+[version-image]: https://img.shields.io/npm/v/@typescript-tea/core.svg?style=flat
+[version-url]: https://www.npmjs.com/package/@typescript-tea/core
+[build-image]: https://github.com/typescript-tea/core/workflows/Build/badge.svg
+[build-url]: https://github.com/typescript-tea/core/actions?query=workflow%3ABuild+branch%3Amaster
+[license-image]: https://img.shields.io/github/license/typescript-tea/core.svg?style=flat
+[license-url]: https://opensource.org/licenses/MIT
