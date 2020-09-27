@@ -1,6 +1,7 @@
 {
   "files": ["../src/index.js"],
   "compilerOptions": {
-    "target": "es5"
+    "target": "es5",
+    "strictNullChecks": true
   }
 }
