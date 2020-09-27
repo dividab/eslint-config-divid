@@ -21,11 +21,11 @@ module.exports = {
     "./rules/imports/helpful-warnings.js",
     "./rules/imports/module-systems.js",
     "./rules/imports/static-analysis.js",
-    "./rules/imports/style-guide.js"
+    "./rules/imports/style-guide.js",
   ].map(require.resolve),
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module"
-  }
+    sourceType: "module",
+  },
 };
