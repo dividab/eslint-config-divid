@@ -92,7 +92,7 @@ yarn version --major
 
 [version-image]: https://img.shields.io/npm/v/@typescript-tea/core.svg?style=flat
 [version-url]: https://www.npmjs.com/package/@typescript-tea/core
-[build-image]: https://github.com/typescript-tea/core/workflows/Build/badge.svg
-[build-url]: https://github.com/typescript-tea/core/actions?query=workflow%3ABuild+branch%3Amaster
+[build-image]: https://github.com/dividab/eslint-config-divid/workflows/Build/badge.svg
+[build-url]: https://github.com/dividab/eslint-config-divid/actions?query=workflow%3ABuild+branch%3Amaster
 [license-image]: https://img.shields.io/github/license/typescript-tea/core.svg?style=flat
 [license-url]: https://opensource.org/licenses/MIT
