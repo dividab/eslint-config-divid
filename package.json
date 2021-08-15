@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-divid",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "ESLint Sharable Config using typescript and prettier with functional programming style",
   "main": "src/index.js",
   "author": "Jonas Kello <jonas.kello@divid.se>",
