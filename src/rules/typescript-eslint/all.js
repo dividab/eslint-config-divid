@@ -143,5 +143,6 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off", // prettier
+    "@typescript-eslint/no-non-null-assertion": "error",
   },
 };
