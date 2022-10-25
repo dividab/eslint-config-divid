@@ -117,11 +117,6 @@ module.exports = {
         property: "__defineSetter__",
         message: "Please use Object.defineProperty instead.",
       },
-      {
-        object: "Math",
-        property: "pow",
-        message: "Use the exponentiation operator (**) instead.",
-      },
     ],
     "no-return-assign": ["off", "always"], // TODO: Enable this?
     "no-return-await": "error",
