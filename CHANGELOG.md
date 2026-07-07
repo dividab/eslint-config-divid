@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.1...HEAD)
 
+## [v0.8.0](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.1...v0.8.0) - 2026-07-07
+
+- Switch to pnpm
+
+### Changed
+
+- Updated peer deps.
+
 ## [v0.7.1](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.0...v0.7.1) - 2022-03-24
 
 ### Changed

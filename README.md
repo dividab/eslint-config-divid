@@ -19,7 +19,7 @@ Rules are configured for use with:
 Install the package and it's peer dependencies:
 
 ```bash
-yarn add --dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional eslint-plugin-import confusing-browser-globals
+pnpm add --save-dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional eslint-plugin-import confusing-browser-globals
 ```
 
 Add a file called `.eslintrc.js` to your project's root with the following content:
@@ -85,9 +85,9 @@ Any rules that conflicts or are uncessary becuase of prettier and typescript has
 ## How to publish
 
 ```
-yarn version --patch
-yarn version --minor
-yarn version --major
+pnpm version patch
+pnpm version minor
+pnpm version major
 ```
 
 [version-image]: https://img.shields.io/npm/v/@typescript-tea/core.svg?style=flat

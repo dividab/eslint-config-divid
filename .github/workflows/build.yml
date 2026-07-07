@@ -8,17 +8,19 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [24.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build, and test
+          cache: pnpm
+      - name: install and test
         run: |
-          yarn install --frozen-lockfile
-          yarn test
+          pnpm install --frozen-lockfile
+          pnpm test
         env:
           CI: true
