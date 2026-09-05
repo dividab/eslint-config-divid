@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "author": "Jonas Kello <jonas.kello@divid.se>",
   "license": "MIT",
-  "packageManager": "pnpm@11.3.0",
+  "packageManager": "pnpm@12.3.1",
   "engines": {
     "node": ">=24.0.0",
     "npm": "please-use-pnpm",
@@ -50,6 +50,6 @@
   "scripts": {
     "test": "jest",
     "preversion": "pnpm test",
-    "postversion": "git push --tags && pnpm publish && git push && echo \"Successfully released version $npm_package_version!\""
+    "postversion": "git push --tags && pnpm publish --new-version $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
   }
 }
