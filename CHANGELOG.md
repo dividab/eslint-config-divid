@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated peer deps.
+- Upgraded to ESLint 8 (`@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to v8, with the corresponding rule renames in `src/rules/typescript-eslint/all.js`).
 
 ## [v0.7.1](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.0...v0.7.1) - 2022-03-24
 
