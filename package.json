@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-divid",
-  "version": "0.8.0",
+  "version": "9.0.0",
   "description": "ESLint Sharable Config using typescript and prettier with functional programming style",
   "main": "src/index.js",
   "type": "module",
