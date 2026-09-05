@@ -1,4 +1,5 @@
-const { ESLint } = require("eslint");
+import { describe, it, expect } from "vitest";
+import { ESLint } from "eslint";
 
 async function getErrors(configFile) {
   const cli = new ESLint({

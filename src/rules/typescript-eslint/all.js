@@ -6,12 +6,13 @@ module.exports = {
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/ban-tslint-comment": "error",
-    "@typescript-eslint/ban-types": "error",
+    "@typescript-eslint/no-empty-object-type": "error",
+    "@typescript-eslint/no-unsafe-function-type": "error",
+    "@typescript-eslint/no-wrapper-object-types": "error",
     "brace-style": "off",
     "@typescript-eslint/brace-style": "off", // prettier
     "@typescript-eslint/class-literal-property-style": "error",
-    "comma-spacing": "off",
-    "@typescript-eslint/comma-spacing": "error",
+    "comma-spacing": "error",
     "@typescript-eslint/consistent-type-assertions": "off",
     "@typescript-eslint/consistent-type-definitions": "off", // TODO: Determine if we want type of interface enforced...
     "@typescript-eslint/consistent-type-imports": "error",
@@ -61,7 +62,7 @@ module.exports = {
     "@typescript-eslint/no-extraneous-class": "error",
     "@typescript-eslint/no-floating-promises": "off", // TODO: Enable?
     "@typescript-eslint/no-for-in-array": "error",
-    "@typescript-eslint/no-implicit-any-catch": "error",
+    // no-implicit-any-catch was removed in v8 with no replacement (TS's useUnknownInCatchVariables covers this now)
     "@typescript-eslint/no-implied-eval": "error",
     "@typescript-eslint/no-inferrable-types": "off", // Being explicit is always a good thing
     "no-invalid-this": "off",
@@ -78,14 +79,14 @@ module.exports = {
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/no-non-null-assertion": "off", // TODO: Enable?
-    "@typescript-eslint/no-parameter-properties": "error",
+    "@typescript-eslint/parameter-properties": "error", // renamed from no-parameter-properties in v8
     "no-redeclare": "off",
     "@typescript-eslint/no-redeclare": "error",
     "@typescript-eslint/no-require-imports": "error",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-this-alias": "error",
-    "@typescript-eslint/no-throw-literal": "error",
+    "@typescript-eslint/only-throw-error": "error", // renamed from no-throw-literal in v8
     "@typescript-eslint/no-type-alias": "off", // TODO: Enable?
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
