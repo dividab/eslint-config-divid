@@ -1,7 +1,7 @@
 /* eslint-disable */
-const confusingBrowserGlobals = require("confusing-browser-globals");
+import confusingBrowserGlobals from "confusing-browser-globals";
 
-module.exports = {
+export default {
   rules: {
     "init-declarations": "off", // Implicit undefined?
     "no-delete-var": "error",

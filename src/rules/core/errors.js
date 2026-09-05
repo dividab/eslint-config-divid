@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     "for-direction": "error",
     "getter-return": "off", //Checked by Typescript - ts(2378)

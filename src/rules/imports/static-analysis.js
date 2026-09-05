@@ -1,5 +1,7 @@
-module.exports = {
-  plugins: ["import"],
+import importPlugin from "eslint-plugin-import";
+
+export default {
+  plugins: { import: importPlugin },
   rules: {
     "import/no-unresolved": "off", // Checked by Typescript
     "import/named": "off", // Checked by Typescript

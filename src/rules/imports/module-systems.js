@@ -1,5 +1,7 @@
-module.exports = {
-  plugins: ["import"],
+import importPlugin from "eslint-plugin-import";
+
+export default {
+  plugins: { import: importPlugin },
   rules: {
     "import/unambiguous": "off",
     "import/no-commonjs": "off", // Checked by @typescript-eslint/no-require-imports

@@ -3,6 +3,7 @@
   "version": "0.8.0",
   "description": "ESLint Sharable Config using typescript and prettier with functional programming style",
   "main": "src/index.js",
+  "type": "module",
   "author": "Jonas Kello <jonas.kello@divid.se>",
   "license": "MIT",
   "packageManager": "pnpm@12.3.1",
@@ -30,21 +31,24 @@
     "es2017",
     "es2018"
   ],
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.11",
+    "globals": "^17.12.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "confusing-browser-globals": "^1.0.11",
-    "eslint": "^8.57.1",
-    "eslint-plugin-functional": "^4.2.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-functional": "^9.0.5",
     "eslint-plugin-import": "^2.29.0",
     "typescript": "^6.0.1",
     "vitest": "^5.0.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0",
-    "eslint-plugin-functional": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-functional": "^9.0.0",
     "eslint-plugin-import": "^2.25.4"
   },
   "scripts": {

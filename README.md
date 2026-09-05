@@ -19,24 +19,32 @@ Rules are configured for use with:
 Install the package and it's peer dependencies:
 
 ```bash
-pnpm add --save-dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional eslint-plugin-import confusing-browser-globals
+pnpm add --save-dev eslint-config-divid eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-functional eslint-plugin-import
 ```
 
-Add a file called `.eslintrc.js` to your project's root with the following content:
+This package ships as flat config (ESLint 9+) and is published as an ES module. Add a file called
+`eslint.config.js` to your project's root (name it `eslint.config.mjs` if your own project isn't
+already `"type": "module"`) with the following content:
 
 ```js
-module.exports = {
-  extends: "divid",
-  parserOptions: {
-    project: "./tsconfig.json",
+import divid from "eslint-config-divid";
+
+export default [
+  ...divid,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
   },
-};
+];
 ```
 
 Add the following to the `scripts` section of your project's package.json:
 
 ```
-"lint": "eslint './src/**/*.ts{,x}' --ext .js,.ts,.tsx -f visualstudio"
+"lint": "eslint . -f visualstudio"
 ```
 
 ## vscode config
@@ -64,18 +72,25 @@ You can set the vscode eslint plugin as recommended by adding a file `.vscode/ex
 
 ## Overriding rules
 
-If you want to override a rule, just put it in `.eslintrc.js` like this:
+If you want to override a rule, add another entry to the flat config array after `...divid` —
+later entries win:
 
 ```js
-module.exports = {
-  extends: "divid",
-  parserOptions: {
-    project: "./tsconfig.json",
+import divid from "eslint-config-divid";
+
+export default [
+  ...divid,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    rules: {
+      "@typescript-eslint/array-type": ["error", { default: "array" }],
+    },
   },
-  rules: {
-    "@typescript-eslint/array-type": ["error", { default: "array" }],
-  },
-};
+];
 ```
 
 ## Prettier and typescript

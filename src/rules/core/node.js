@@ -1,6 +1,8 @@
-module.exports = {
-  env: {
-    node: true,
+import globals from "globals";
+
+export default {
+  languageOptions: {
+    globals: globals.node,
   },
   rules: {
     "callback-return": "off", // TODO: Motivate

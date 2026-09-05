@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     "accessor-pairs": "off", // properties should be readonly so no getters should exist
     "array-callback-return": "error",

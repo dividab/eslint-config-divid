@@ -1,9 +1,11 @@
-module.exports = {
-  plugins: ["functional"],
+import functionalPlugin from "eslint-plugin-functional";
+
+export default {
+  plugins: { functional: functionalPlugin },
   rules: {
-    "functional/no-conditional-statement": "off", // TODO: Enable?
-    "functional/no-expression-statement": "off", // TODO: Enable?
-    "functional/no-loop-statement": "off", // TODO: Enable?
+    "functional/no-conditional-statements": "off", // TODO: Enable? (renamed from no-conditional-statement in v8)
+    "functional/no-expression-statements": "off", // TODO: Enable? (renamed from no-expression-statement in v8)
+    "functional/no-loop-statements": "off", // TODO: Enable? (renamed from no-loop-statement in v8)
     "functional/no-return-void": "off", // TODO: Enable?
   },
 };

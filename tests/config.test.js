@@ -1,15 +1,20 @@
 import { describe, it, expect } from "vitest";
 import { ESLint } from "eslint";
+import config from "../src/index.js";
 
-async function getErrors(configFile) {
+async function getErrors() {
   const cli = new ESLint({
-    overrideConfigFile: configFile,
-    overrideConfig: {
-      parser: "@typescript-eslint/parser",
-      parserOptions: {
-        project: "tests/dummy.tsconfig.json",
+    overrideConfigFile: true,
+    overrideConfig: [
+      ...config,
+      {
+        languageOptions: {
+          parserOptions: {
+            project: "tests/dummy.tsconfig.json",
+          },
+        },
       },
-    },
+    ],
   });
   // Seems we need to give a filepath of a valid file that is included in tsconfig.json
   // even if we are only linting text
@@ -17,22 +22,9 @@ async function getErrors(configFile) {
   return await cli.lintText("", { filePath: "src/index.js" });
 }
 
-// describe("Validate ESLint configs", () => {
-//   ["src/rules/core/errors.js", "src/rules/typescript-eslint/all.js"].forEach(
-//     (file) => {
-//       it(`load config ${file} in ESLint to validate all rules are correct`, async () => {
-//         const lintResults = await getErrors(file);
-//         expect(lintResults[0].messages).toEqual([]);
-//       });
-//     }
-//   );
-// });
-
 describe("Validate ESLint config", () => {
-  ["src/index.js"].forEach((file) => {
-    it(`load config ${file} in ESLint to validate all rules are correct`, async () => {
-      const lintResults = await getErrors(file);
-      expect(lintResults[0].messages).toEqual([]);
-    });
+  it("load src/index.js in ESLint to validate all rules are correct", async () => {
+    const lintResults = await getErrors();
+    expect(lintResults[0].messages).toEqual([]);
   });
 });

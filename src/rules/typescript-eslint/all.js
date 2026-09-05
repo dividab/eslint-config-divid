@@ -1,5 +1,7 @@
-module.exports = {
-  plugins: ["@typescript-eslint"],
+import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
+
+export default {
+  plugins: { "@typescript-eslint": tsEslintPlugin },
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": ["error", { default: "generic" }], // ReadonlyArray<> only as generic before typescript version X.X
@@ -7,7 +9,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/ban-tslint-comment": "error",
     "@typescript-eslint/no-empty-object-type": "error",
-    "@typescript-eslint/no-unsafe-function-type": "error",
+    "@typescript-eslint/no-unsafe-function-type": "off",
     "@typescript-eslint/no-wrapper-object-types": "error",
     "brace-style": "off",
     "@typescript-eslint/brace-style": "off", // prettier
@@ -144,6 +146,5 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off", // prettier
-    "@typescript-eslint/no-non-null-assertion": "error",
   },
 };

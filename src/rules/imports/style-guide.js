@@ -1,5 +1,7 @@
-module.exports = {
-  plugins: ["import"],
+import importPlugin from "eslint-plugin-import";
+
+export default {
+  plugins: { import: importPlugin },
   rules: {
     "import/first": "error",
     "import/exports-last": "off", // TODO: Enable?

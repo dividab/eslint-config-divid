@@ -1,14 +1,10 @@
-module.exports = {
-  env: {
-    es6: true,
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: "module",
-    ecmaFeatures: {
-      generators: false,
-      objectLiteralDuplicateProperties: false,
-    },
+import globals from "globals";
+
+export default {
+  languageOptions: {
+    // ecmaVersion/sourceType are set on the top-level config in index.js;
+    // env: { es6: true } only ever contributed globals in the eslintrc format
+    globals: globals.es2015,
   },
   rules: {
     "arrow-body-style": "off", // prettier-maybe

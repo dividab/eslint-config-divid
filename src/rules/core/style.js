@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     "array-bracket-newline": "off", // prettier
     "array-bracket-spacing": "off", // prettier

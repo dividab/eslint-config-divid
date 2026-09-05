@@ -5,7 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.1...HEAD)
+## [Unreleased](https://github.com/jonaskello/eslint-plugin-functional/compare/v9.0.0...HEAD)
+
+## [v9.0.0](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.8.0...v9.0.0) - 2026-09-05
+
+Package version now tracks the ESLint major version it targets.
+
+### Changed
+
+- Rewritten as native ESLint 9 flat config (`src/index.js` now exports a flat config array instead of an eslintrc-style object with `extends`). Consumers now use `eslint.config.js` with `import divid from "eslint-config-divid"; export default [...divid, ...]` instead of `.eslintrc.js` + `extends: "divid"`.
+- The package itself is now published as an ES module (`"type": "module"`); every rule file uses `import`/`export default`.
+- Upgraded to ESLint 9 and `eslint-plugin-functional` v9, with the corresponding rule renames (e.g. `no-class` → `no-classes`, `no-method-signature` → `prefer-property-signatures`, `no-let` option names updated). `prefer-type-literal` was dropped (removed upstream, overlapped with the already-off `@typescript-eslint/consistent-type-definitions`).
+- `confusing-browser-globals` moved from `devDependencies` to `dependencies`, since it's required at runtime by consumers (this was a pre-existing bug).
+- Turned off `@typescript-eslint/no-non-null-assertion` and `@typescript-eslint/no-unsafe-function-type`.
 
 ## [v0.8.0](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.7.1...v0.8.0) - 2026-07-07
 
