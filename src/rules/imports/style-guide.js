@@ -20,7 +20,10 @@ export default {
     "import/max-dependencies": "off",
     "import/no-unassigned-import": "error",
     "import/no-named-default": "off",
-    "import/no-default-export": "error",
+    // Disabled: crashes under ESLint 10 (context.parserOptions was removed; this rule
+    // still unconditionally reads it - https://github.com/import-js/eslint-plugin-import
+    // has no ESLint 10-compatible release yet). Re-enable once eslint-plugin-import fixes this.
+    "import/no-default-export": "off",
     "import/no-named-export": "off",
     "import/no-anonymous-default-export": "off", // default exports are forbidden
     "import/group-exports": "off",

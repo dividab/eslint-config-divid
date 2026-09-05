@@ -5,7 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/jonaskello/eslint-plugin-functional/compare/v9.0.0...HEAD)
+## [Unreleased](https://github.com/jonaskello/eslint-plugin-functional/compare/v10.0.0...HEAD)
+
+## [v10.0.0](https://github.com/jonaskello/eslint-plugin-functional/compare/v9.0.0...v10.0.0) - 2026-09-05
+
+### Changed
+
+- Upgraded to ESLint 10 and `eslint-plugin-functional` v10 (no rule renames needed between v9 and v10).
+
+### Fixed / Known issue
+
+- Disabled `import/no-default-export`: it crashes under ESLint 10 because `context.parserOptions` (a deprecated back-compat shim) was removed, and `eslint-plugin-import@2.32.0` still reads it unconditionally. No ESLint 10-compatible release of `eslint-plugin-import` exists yet; re-enable once one ships.
+- `eslint-plugin-import`'s own `peerDependencies` still cap at `eslint ^9` (not `^10`), so installs will show an unmet-peer warning against this package's `eslint@^10.0.0` peer range. This is a limitation of the upstream package, not fixable from here.
 
 ## [v9.0.0](https://github.com/jonaskello/eslint-plugin-functional/compare/v0.8.0...v9.0.0) - 2026-09-05
 
